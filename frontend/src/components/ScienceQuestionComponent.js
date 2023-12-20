@@ -48,7 +48,7 @@ const ScienceQuestionComponent = () => {
     }
 
     return (
-        <div>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
             {!quizStarted && <button onClick={handleButtonClick}>BEGIN</button>}
 
             {question && (
