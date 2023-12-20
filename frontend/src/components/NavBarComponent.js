@@ -31,6 +31,7 @@ const NavBar = () => {
                 <li style={listItemStyle}><Link to="/trivia" style={linkStyle}>Trivia</Link></li>
                 <li style={listItemStyle}><Link to="/rps" style={linkStyle}>RPS</Link></li>
                 <li style={listItemStyle}><Link to="/wordguesser" style={linkStyle}>Word Guesser</Link></li>
+                <li style={listItemStyle}><Link to="/facts" style={linkStyle}>Facts</Link></li>
             </ul>
         </nav>
     );
