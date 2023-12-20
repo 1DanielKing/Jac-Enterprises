@@ -2,6 +2,10 @@ import React from "react";
 import RPSComponent from "../components/RPSComponent";
 import TriviaPage from "./TriviaPage";
 import WordGuesserComponent from "../components/WordGuesserComponent";
+import AboutPage from './AboutPage';
+import ContactPage from './ContactPage';
+
+
 
 const HomePage = () => {
     const sectionStyle = {
@@ -51,8 +55,8 @@ const HomePage = () => {
   };
 
   return (
-    <div>
-      <section style={{ ...sectionStyle, backgroundColor: '#add8e6' }} id="section1">
+    <div> 
+        <section style={{ ...sectionStyle, backgroundColor: '#add8e6' }} id="section1"> 
         <div className="container">
           <h1>Welcome to Mystery Educator!</h1>
           <p>Home of Children's education & entertainment</p>
@@ -118,13 +122,15 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section style={{ ...sectionStyle, backgroundColor: 'brown' }} id="section6">
-        <div className="container">
-          {/* Placeholder box */}
-          <div style={placeholderBoxStyle}>
-            <p>Content for Section 6</p>
-          </div>
-        </div>
+            {/* Section 6 Content */}
+            <section style={{ ...sectionStyle, backgroundColor: 'brown' }} id="section6">
+                <div className="container">
+                    {/* About and Contact content rendered together */}
+                    <div>
+                        <AboutPage />
+                        <ContactPage />
+                    </div>
+                  </div>
       </section>
     </div>
   );
