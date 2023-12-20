@@ -2,8 +2,11 @@ import React from "react";
 import RPSComponent from "../components/RPSComponent";
 import TriviaPage from "./TriviaPage";
 import WordGuesserComponent from "../components/WordGuesserComponent";
-import AboutPage from './AboutPage';
-import ContactPage from './ContactPage';
+import kingimage from '../images/king.png'
+import ortizimage from '../images/ortiz.png'
+import sotoimage from '../images/soto.png'
+import jacksonimage from '../images/jackson.png'
+import rogersimage from '../images/rogers.png'
 
 
 
@@ -52,6 +55,24 @@ const HomePage = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const aboutContainerStyle = {
+    ...containerItemStyle,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    flexWrap: 'nowrap',
+    width: "90vw",
+  };
+
+  const personContainerStyle = {
+    backgroundColor: "#ddd",
+    border: "1px solid #999",
+    
+    
+    width: "15vw",
+    borderRadius: 15,
   };
 
   return (
@@ -122,16 +143,82 @@ const HomePage = () => {
         </div>
       </section>
 
-            {/* Section 6 Content */}
-            <section style={{ ...sectionStyle, backgroundColor: 'brown' }} id="section6">
-                <div className="container">
-                    {/* About and Contact content rendered together */}
-                    <div>
-                        <AboutPage />
-                        <ContactPage />
-                    </div>
-                  </div>
+       {/* About section */}
+       <section style={{ ...sectionStyle, backgroundColor: 'brown' }} id="section6">
+        <div className="container">
+          {/* AboutPage */}
+          <h1>About the Creators</h1>
+          <div style={aboutContainerStyle}>  {/* Container for each person - Daniel King*/}
+            <div style={personContainerStyle}>
+              {/* Container for the photo */}
+              <div style={{ marginBottom: '10px' }}>
+                <img src={kingimage} alt="Person" width="100" height="100" />
+              </div>
+              {/* Container for the name and bio */}
+              <div>
+                <p>Daniel King</p>
+                <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis vel, aliquet justo.</p>
+              </div>
+            </div>
+            
+            <div style={personContainerStyle}> {/* Container for each person - Brian Ortiz*/}
+              {/* Container for the photo */}
+              <div style={{ marginBottom: '10px' }}>
+                <img src={ortizimage} alt="Person" width="100" height="100" />
+              </div>
+              {/* Container for the name and bio */}
+              <div>
+                <p>Brian Ortiz</p>
+                <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis vel, aliquet justo.</p>
+              </div>
+            </div>
+            
+            <div style={personContainerStyle}> {/* Container for each person - Daniel Soto*/}
+              {/* Container for the photo */}
+              <div style={{ marginBottom: '10px' }}>
+                <img src={sotoimage} alt="Person" width="100" height="100" />
+              </div>
+              {/* Container for the name and bio */}
+              <div>
+                <p>Daniel Soto</p>
+                <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis vel, aliquet justo.</p>
+              </div>
+            </div>
+            
+            <div style={personContainerStyle}> {/* Container for each person - Arlen Jackson*/}
+              {/* Container for the photo */}
+              <div style={{ marginBottom: '10px' }}>
+                <img src={jacksonimage} alt="Person" width="100" height="100" />
+              </div>
+              {/* Container for the name and bio */}
+              <div>
+                <p>Arlen Jackson</p>
+                <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis vel, aliquet justo.</p>
+              </div>
+            </div>
+
+            <div style={personContainerStyle}> {/* Container for each person - Arlen Jackson*/}
+              {/* Container for the photo */}
+              <div style={{ marginBottom: '10px' }}>
+                <img src={rogersimage} alt="Person" width="100" height="100" />
+              </div>
+              {/* Container for the name and bio */}
+              <div>
+                <p>Kyle Rogers</p>
+                <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis vel, aliquet justo.</p>
+              </div>
+            </div>
+            {/* Repeat the structure for other persons */}
+            {/* Add more person containers as needed */}
+          </div>
+        </div>
       </section>
+
+      {/* Contact section */}
+      <div style={aboutContainerStyle}>
+        <h1>Contact Section for Jac Enterprises</h1>
+      </div>
+      {/* Remaining code for Contact section... */}
     </div>
   );
 };
