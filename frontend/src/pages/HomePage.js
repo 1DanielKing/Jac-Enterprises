@@ -1,4 +1,7 @@
 import React from "react";
+import RPSComponent from "../components/RPSComponent";
+import TriviaPage from "./TriviaPage";
+import WordGuesserComponent from "../components/WordGuesserComponent";
 
 const HomePage = () => {
     const sectionStyle = {
@@ -80,7 +83,7 @@ const HomePage = () => {
 
       <section style={{ ...sectionStyle, backgroundColor: 'yellow' }} id="section2">
         <div className="container">
-          {/* Placeholder box */}
+        <RPSComponent />
           <div style={placeholderBoxStyle}>
             <p>Content for Section 2</p>
           </div>
@@ -90,7 +93,7 @@ const HomePage = () => {
 
       <section style={{ ...sectionStyle, backgroundColor: 'green' }} id="section3">
         <div className="container">
-          {/* Placeholder box */}
+          <TriviaPage/>
           <div style={placeholderBoxStyle}>
             <p>Content for Section 3</p>
           </div>
@@ -99,7 +102,7 @@ const HomePage = () => {
 
       <section style={{ ...sectionStyle, backgroundColor: 'red' }} id="section4">
         <div className="container">
-          {/* Placeholder box */}
+          <WordGuesserComponent/>
           <div style={placeholderBoxStyle}>
             <p>Content for Section 4</p>
           </div>
