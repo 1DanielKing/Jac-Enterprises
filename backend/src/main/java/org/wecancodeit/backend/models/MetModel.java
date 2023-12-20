@@ -10,9 +10,6 @@ public class MetModel {
     @JsonProperty("primaryImage")
     protected String image;
     
-    // @JsonProperty("additionalImages")
-    // protected String[] moreImages;
-
     @JsonProperty("title")
     protected String title;
 
@@ -37,7 +34,6 @@ public class MetModel {
     public MetModel(String image, String moreImages, String title, String culture, String period, String date,
             String artist, String artistInfo) {
         this.image = image;
-        // this.moreImages = moreImages;
         this.title = title;
         this.culture = culture;
         this.period = period;
@@ -61,14 +57,6 @@ public class MetModel {
     public void setImage(String image) {
         this.image = image;
     }
-
-    // public String getMoreImages() {
-    //     return moreImages;
-    // }
-
-    // public void setMoreImages(String moreImages) {
-    //     this.moreImages = moreImages;
-    // }
 
     public String getTitle() {
         return title;
