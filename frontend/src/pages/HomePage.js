@@ -1,7 +1,11 @@
-import React from "react";
-import RPSComponent from "../components/RPSComponent";
-import TriviaPage from "./TriviaPage";
-import WordGuesserComponent from "../components/WordGuesserComponent";
+import RPSComponent from "../components/RPSComponent"
+import TriviaPage from "./TriviaPage"
+import WordGuesserComponent from "../components/WordGuesserComponent"
+import controllerImage from '../images/controller.jpg'
+import spaceImage from '../images/space.jpg'
+import teamImage from '../images/team.jpg'
+import wallpaperImage from '../images/wallpaper.png'
+
 import FactsComponent from "../components/FactsComponent";
 import MetApiComponent from "../components/MetApiComponent";
 
@@ -44,12 +48,12 @@ const HomePage = () => {
     margin: "20px",
   };
 
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
   return (
     <div>
