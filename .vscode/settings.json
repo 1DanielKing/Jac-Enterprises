@@ -1,5 +1,5 @@
 {
   "java.compile.nullAnalysis.mode": "automatic",
   "java.configuration.updateBuildConfiguration": "interactive",
-  "cSpell.words": ["nasabtn", "wecancodeit", "wordguesser"]
+  "cSpell.words": ["Configurer", "nasabtn", "wecancodeit", "wordguesser"]
 }

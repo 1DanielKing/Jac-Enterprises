@@ -2,6 +2,8 @@ import React from "react";
 import RPSComponent from "../components/RPSComponent";
 import TriviaPage from "./TriviaPage";
 import WordGuesserComponent from "../components/WordGuesserComponent";
+import FactsComponent from "../components/FactsComponent";
+import MetApiComponent from "../components/MetApiComponent";
 
 const HomePage = () => {
   const sectionStyle = {
@@ -121,16 +123,17 @@ const HomePage = () => {
 
       <section
         style={{ ...sectionStyle, backgroundColor: "pink" }}
-        id="section5">
+        id="section5"
+      >
         <div style={horizontalContainersStyle}>
           <div style={containerItemStyle}>
             <button id="nasaBtn">NASA</button>
           </div>
           <div style={containerItemStyle}>
-            <button id="metBtn" onClick={fetch('http://localhost:8080/arts', {method: 'GET', headers: {'Content-Type': 'application/json'}})}>Metropolitan Museum of Art</button>
+            <MetApiComponent id="metBtn">Metropolitan Museum of Art</MetApiComponent>
           </div>
           <div style={containerItemStyle}>
-            <button id="factsBtn">Facts</button>
+            <FactsComponent id="factsBtn"> Facts </FactsComponent>
           </div>
         </div>
       </section>

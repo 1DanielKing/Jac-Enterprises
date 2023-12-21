@@ -5,6 +5,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.wecancodeit.backend.models.MetModel;
+
 import java.util.Random;
 
 @Service
@@ -23,7 +24,6 @@ public class MetService {
 
     public MetModel fetchMetArtData() {
         long artId = min + random.nextInt(max - min);
-        artId = 115803;
         while (true) {
             try {
                 return restTemplate.getForObject(apiUrl + "/" + artId, MetModel.class);
