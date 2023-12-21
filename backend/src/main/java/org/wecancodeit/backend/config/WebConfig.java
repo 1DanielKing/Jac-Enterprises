@@ -10,10 +10,19 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("http://localhost:8080/arts") // Adjust this to your API path
-            .allowedOrigins("http://localhost:3000") // Your React app's URL
-            .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-            .allowedHeaders("*")
-            .allowCredentials(true);
+        registry.addMapping("/api/**") // Adjust this to your API path
+                .allowedOrigins("http://localhost:3000") // Your React app's URL
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("*")
+                .allowCredentials(true);
     }
+    
+    // @Override
+    // public void addCorsMappings(CorsRegistry registry) {
+    //     registry.addMapping("/api/**") // Adjust this to your API path
+    //         .allowedOrigins("http://localhost:3000") // Your React app's URL
+    //         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+    //         .allowedHeaders("*")
+    //         .allowCredentials(true);
+    // }
 }

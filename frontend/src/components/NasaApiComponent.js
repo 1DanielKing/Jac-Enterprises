@@ -1,8 +1,8 @@
 import React, { useEffect, useCallback } from "react";
 
-function MetApiComponent() {
+function NasaApiComponent() {
     const fetchData = useCallback(() => {
-        fetch('http://localhost:8080/api/arts')
+        fetch('http://localhost:8080/api/nasaPodData')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
@@ -10,13 +10,10 @@ function MetApiComponent() {
                 return response.json();
             })
             .then((data) => {
-                console.log("Image:", data.primaryImage);
                 console.log("Title:", data.title);
-                console.log("Culture:", data.culture);
-                console.log("Period:", data.period);
                 console.log("Date:", data.objectDate);
-                console.log("Artist:", data.artistDisplayName);
-                console.log("Artist Info:", data.artistDisplayBio);
+                console.log("url:", data.url);
+                console.log("Explanation:", data.explanation);
             })
             .catch((error) => {
                 console.error("Error:", error);
@@ -30,10 +27,10 @@ function MetApiComponent() {
     return (
         <div>
             <button onClick={fetchData}>
-                Metropolitan Museum of Art
+                NASA
             </button>
         </div>
     );
 };
 
-export default MetApiComponent;
+export default NasaApiComponent;

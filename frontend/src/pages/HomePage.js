@@ -8,6 +8,7 @@ import wallpaperImage from '../images/wallpaper.png'
 
 import FactsComponent from "../components/FactsComponent";
 import MetApiComponent from "../components/MetApiComponent";
+import NasaApiComponent from "../components/NasaApiComponent"
 
 const HomePage = () => {
   const sectionStyle = {
@@ -131,10 +132,12 @@ const HomePage = () => {
       >
         <div style={horizontalContainersStyle}>
           <div style={containerItemStyle}>
-            <button id="nasaBtn">NASA</button>
+            <NasaApiComponent id="nasaBtn">NASA</NasaApiComponent>
           </div>
           <div style={containerItemStyle}>
-            <MetApiComponent id="metBtn">Metropolitan Museum of Art</MetApiComponent>
+            <MetApiComponent id="metBtn">
+              Metropolitan Museum of Art
+            </MetApiComponent>
           </div>
           <div style={containerItemStyle}>
             <FactsComponent id="factsBtn"> Facts </FactsComponent>
