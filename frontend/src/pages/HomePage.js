@@ -1,10 +1,13 @@
 import RPSComponent from "../components/RPSComponent"
-import TriviaPage from "./TriviaPage"
+import TriviaComponent from "../components/TriviaComponent"
+
 import WordGuesserComponent from "../components/WordGuesserComponent"
 import controllerImage from '../images/controller.jpg'
 import spaceImage from '../images/space.jpg'
 import teamImage from '../images/team.jpg'
 import wallpaperImage from '../images/wallpaper.png'
+
+
 
 
 const HomePage = () => {
@@ -52,7 +55,7 @@ const HomePage = () => {
         justifyContent: "center",
         textAlign: "center",
         marginTop: "0px",
-        backgroundImage: `url(${wallpaperImage}), linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red)`,
+        backgroundImage: `url(${wallpaperImage}), linear-gradient(to right,indigo, orange, red)`,
         backgroundSize: '100% 100%',
     }
 
@@ -85,7 +88,7 @@ const HomePage = () => {
         alignItems: "center",
         flexDirection: "column",
         justifyContent: "space-between",
-        border: "10px solid yellow",
+        border: "10px solid white",
         backgroundImage: `url(${controllerImage})`,
         backgroundSize: '100% 100%',
         backgroundRepeat: 'no-repeat',
@@ -115,6 +118,8 @@ const HomePage = () => {
         color: 'white',
         fontWeight: 'bold',
     };
+
+
 
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
@@ -175,26 +180,22 @@ const HomePage = () => {
             </section>
 
             <section
-                style={{ ...sectionStyle, backgroundColor: "green" }}
+                style={{ ...sectionStyle, backgroundImage: `url(${wallpaperImage}), linear-gradient(to right, violet, orange, lightblue)`, backgroundSize: '100% 100%', }}
                 id="section3"
             >
                 <div className="container">
-                    <TriviaPage />
-                    <div style={placeholderBoxStyle}>
-                        <p>Content for Section 3</p>
-                    </div>
+                    <TriviaComponent />
+
                 </div>
             </section>
 
             <section
-                style={{ ...sectionStyle, backgroundColor: "red" }}
+                style={{ ...sectionStyle, backgroundImage: `url(${wallpaperImage}), linear-gradient(to right, violet, red)`, backgroundSize: '100% 100%', }}
                 id="section4"
             >
                 <div className="container">
                     <WordGuesserComponent />
-                    <div style={placeholderBoxStyle}>
-                        <p>Content for Section 4</p>
-                    </div>
+
                 </div>
             </section>
 

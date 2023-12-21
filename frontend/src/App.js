@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import TriviaPage from './pages/TriviaPage'
 import ArtQuestionComponent from './components/ArtQuestionComponent';
 import HistoryQuestionComponent from './components/HistoryQuestionComponent';
 import ScienceQuestionComponent from './components/ScienceQuestionComponent';
@@ -17,7 +16,6 @@ function App() {
     <NavBar />
       <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/trivia" element={<TriviaPage />} />
       <Route path="/art" element={<ArtQuestionComponent />}/>
       <Route path="/history" element={<HistoryQuestionComponent />} />  
       <Route path="/science" element={<ScienceQuestionComponent />} />  
