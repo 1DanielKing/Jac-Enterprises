@@ -1,12 +1,13 @@
+// import of components
 import RPSComponent from "../components/RPSComponent";
 import TriviaComponent from "../components/TriviaComponent";
-
 import WordGuesserComponent from "../components/WordGuesserComponent";
+
+// import of images below
 import controllerImage from "../images/controller.jpg";
 import spaceImage from "../images/space.jpg";
 import teamImage from "../images/team.jpg";
 import wallpaperImage from "../images/wallpaper.png";
-
 import FactsComponent from "../components/FactsComponent";
 import MetApiComponent from "../components/MetApiComponent";
 import NasaApiComponent from "../components/NasaApiComponent";
@@ -18,6 +19,7 @@ import rogersImage from "../images/rogers.png";
 import devBackground from "../images/dev-background.jpg";
 import rpsBackGround from "../images/rpsBackground.png";
 
+// container styling variables
 const HomePage = () => {
   const sectionStyle = {
     height: "100vh",
@@ -28,23 +30,7 @@ const HomePage = () => {
     backgroundColor: "#add8e6",
     marginTop: "20px", // Adjust the marginTop value to bring the section closer to the top
   };
-  const sectionStyle = {
-    height: "100vh",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    textAlign: "center",
-    backgroundColor: "#add8e6",
-    marginTop: "20px", // Adjust the marginTop value to bring the section closer to the top
-  };
 
-  const horizontalContainersStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    marginTop: "40px",
-    padding: "20px",
-    height: "250px",
-  };
   const horizontalContainersStyle = {
     display: "flex",
     justifyContent: "space-between",
@@ -112,18 +98,6 @@ const HomePage = () => {
     width: "100vw",
   };
 
-  const containerModel = {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.8)",
-    height: "65vh",
-    padding: "40px",
-    marginTop: "150px",
-    borderRadius: 15,
-  };
-
   const imageHorizontalContainers = {
     display: "flex",
     justifyContent: "space-evenly",
@@ -175,21 +149,6 @@ const HomePage = () => {
     }
   };
 
-  const homeSectionStyle = {
-    height: "100vh",
-    display: "flex",
-    alignItems: "flex-start",
-    justifyContent: "center",
-    textAlign: "center",
-    marginTop: "0px",
-    backgroundImage: `url(${wallpaperImage}), linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red)`,
-    backgroundSize: "100% 100%",
-  };
-
-  const homeBannerStyle = {
-    width: "100vw",
-  };
-
   const containerModel = {
     display: "flex",
     flexDirection: "column",
@@ -202,53 +161,7 @@ const HomePage = () => {
     borderRadius: 15,
   };
 
-  const imageHorizontalContainers = {
-    display: "flex",
-    justifyContent: "space-evenly",
-    padding: " 0 40px 0 40px",
-  };
-
-  const imageContainerModel = {
-    height: "300px",
-    width: "275px",
-    display: "flex",
-    alignItems: "center",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    border: "10px solid yellow",
-    /*  backgroundImage: `url(${controllerImage})`, */
-    backgroundSize: "100% 100%",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    borderRadius: 15,
-  };
-
-  const subContainerModel = {
-    width: "270px",
-    height: "220px",
-    padding: "3px",
-    borderRadius: 10,
-    textAlign: "center",
-    fontSize: "20px",
-    color: "white",
-    fontFamily: "Arial, sans-serif",
-  };
-
-  const buttonStyle = {
-    width: "100px",
-    height: "100px",
-    backgroundColor: "limeGreen",
-    cursor: "pointer",
-    borderRadius: "50%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "white",
-    fontWeight: "bold",
-  };
-
-  /* Daniel King's container style const below this comment until sections begin */
-
+  
   const comboAboutAndContactSectionStyle = {
     height: "100vh",
     display: "flex",
@@ -256,7 +169,7 @@ const HomePage = () => {
     justifyContent: "center",
     textAlign: "center",
     backgroundColor: "#add8e6",
-    marginTop: "20px", // Adjust the marginTop value to bring the section closer to the top
+    marginTop: "20px", 
   };
 
   const aboutContainerStyle = {
@@ -288,6 +201,8 @@ const HomePage = () => {
 
   return (
     <div>
+
+{/* section 1 - home */}
       <section style={{ ...homeSectionStyle }} id="section1">
         <div style={{ ...homeBannerStyle }}>
           <div style={imageHorizontalContainers}>
@@ -363,85 +278,65 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      <section
-        style={{ ...sectionStyle, backgroundColor: "yellow" }}
-        id="section2"
-      >
+      
+{/* section 2 - rock paper scissors */}
+      <section style={{...sectionStyle, backgroundImage: `url(${rpsBackGround})`,}}
+      id="section2" >
         <div className="container">
-          <RPSComponent />
-          <div style={placeholderBoxStyle}>
-            <p>Content for Section 2</p>
+          <div style={{ ...placeholderBoxStyle, backgroundColor: 'rgba(255, 240, 200, 0.8)', borderRadius: '70px', }}>
+            <RPSComponent />
           </div>
         </div>
       </section>
 
-      <section
-        style={{
-          ...sectionStyle,
-          backgroundImage: `url(${wallpaperImage}), linear-gradient(to right, violet, orange, lightblue)`,
-          backgroundSize: "100% 100%",
-        }}
-        id="section3"
-      >
+{/* section 3 Trivia */}
+      <section style={{...sectionStyle, backgroundImage: `url(${wallpaperImage}), linear-gradient(to right, violet, orange, lightblue)`, backgroundSize: "100% 100%",}}
+        id="section3">
         <div className="container">
           <TriviaComponent />
         </div>
       </section>
 
-      <section
-        style={{
-          ...sectionStyle,
-          backgroundImage: `url(${wallpaperImage}), linear-gradient(to right, violet, red)`,
-          backgroundSize: "100% 100%",
-        }}
-        id="section4"
-      >
+{/* section 4 word guesser */}
+      <section style={{ ...sectionStyle, backgroundImage: `url(${wallpaperImage}), linear-gradient(to right, violet, red)`,
+      backgroundSize: "100% 100%",}} id="section4">
         <div className="container">
           <WordGuesserComponent />
         </div>
       </section>
 
-      <section
-        style={{
-          ...sectionStyle,
-          backgroundImage: `url(${wallpaperImage})`,
-          backgroundSize: "cover",
-          backgroundColor: "pink",
-          paddingTop: 30,
-          paddingBottom: 50,
-        }}
-        id="section5"
-      >
+{/* section 5 */}
+      <section style={{...sectionStyle, backgroundImage: `url(${wallpaperImage})`, backgroundSize: "cover",
+      backgroundColor: "pink", paddingTop: 30, paddingBottom: 50,}} id="section5">
         <div style={{ ...horizontalContainersStyle, alignItems: "center" }}>
-          <div style={containerItemStyleS5}>
-            <NasaApiComponent id="nasaBtn">NASA</NasaApiComponent>
-          </div>
-          <div
-            style={{ ...containerItemStyleS5, fontSize: 14, paddingTop: 40 }}
-          >
-            <b>
-              If a picture doesn't appear after loading, please click again!
-            </b>
-            <MetApiComponent id="metBtn">
-              Metropolitan Museum of Art
-            </MetApiComponent>
-          </div>
-          <div style={containerItemStyleS5}>
-            <FactsComponent id="factsBtn"> Facts </FactsComponent>
-          </div>
+        <div style={containerItemStyleS5}>
+          <NasaApiComponent id="nasaBtn">NASA</NasaApiComponent>
+        </div>
+        <div style={{ ...containerItemStyleS5, fontSize: 14, paddingTop: 40 }}
+        >
+          <b>
+            If a picture doesn't appear after loading, please click again!
+          </b>
+          <MetApiComponent id="metBtn">
+            Metropolitan Museum of Art
+          </MetApiComponent>
+        </div>
+        <div style={containerItemStyleS5}>
+          <FactsComponent id="factsBtn"> Facts </FactsComponent>
+        </div>
         </div>
       </section>
-      {/* About and Contact section */}
-      <section
-        style={{
-          ...comboAboutAndContactSectionStyle,
-          backgroundColor: "brown",
-        }}
-        id="section6"
-      >
+
+{/* Section 6 - About and Contact section */}
+<section
+  style={{
+    ...comboAboutAndContactSectionStyle,
+    backgroundImage: `url(${wallpaperImage})`,
+    background: 'linear-gradient(to right, gray, white, gray)',
+  }}
+  id="section6"
+>
         <div>
-          {" "}
           {/* div to separate subsections about & contact */}
           {/* AboutPage */}
           <div className="container">
@@ -485,11 +380,9 @@ const HomePage = () => {
                     <div>
                       {" "}
                       {/* name and bio container */}
-                      <p>Daniel King</p>
+                      <p><a href="https://danielking.pro/">Daniel King</a></p>
                       <p>
-                        Bio: Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Sed eget risus porta, tincidunt turpis vel,
-                        aliquet justo.
+                      Enthusiastic about tech and learning, and happy to help provide the community with access to both.
                       </p>
                     </div>
                   </div>
@@ -511,9 +404,9 @@ const HomePage = () => {
                       {/* name and bio container */}
                       <p>Brian Ortiz</p>
                       <p>
-                        Bio: Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Sed eget risus porta, tincidunt turpis vel,
-                        aliquet justo.
+                      Dedicated family-man,  Florida-native, and US Army veteran turned software developer. 
+                      Combining discipline from military service with a passion for coding, I navigate life's 
+                      missions with dedication and code proficiency.
                       </p>
                     </div>
                   </div>
@@ -533,11 +426,9 @@ const HomePage = () => {
                     <div>
                       {" "}
                       {/* name and bio container */}
-                      <p>Daniel Soto</p>
+                      <p><a href="https://SotoDanielJ.github.io/">Daniel Soto</a></p>
                       <p>
-                        Bio: Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Sed eget risus porta, tincidunt turpis vel,
-                        aliquet justo.
+                      US Marines veteran turned full stack developer, skilled in Information Systems, security, and communications, who has expanded his coding expertise post military.
                       </p>
                     </div>
                   </div>
@@ -558,10 +449,7 @@ const HomePage = () => {
                       {" "}
                       {/* name and bio container */}
                       <p>Arlen Jackson</p>
-                      <p>
-                        Bio: Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Sed eget risus porta, tincidunt turpis vel,
-                        aliquet justo.
+                      <p>U.S. Army veteran whose technical prowess ensured Army operations, while recruiting showcased his commitment to finding top talent. Transitioning to civilian life, Arlen continues to contribute to society through his endeavors.
                       </p>
                     </div>
                   </div>
@@ -583,9 +471,9 @@ const HomePage = () => {
                       {/* name and bio container */}
                       <p>Kyle Rogers</p>
                       <p>
-                        Bio: Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Sed eget risus porta, tincidunt turpis vel,
-                        aliquet justo.
+                      U.S. Marines Veteran, turned software developer, channeling her military skills and blending her core values 
+                      with a passion for innovation, striving to make meaningful contributions 
+                      in the tech industry.
                       </p>
                     </div>
                   </div>
