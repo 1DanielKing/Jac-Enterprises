@@ -305,25 +305,30 @@ const HomePage = () => {
         </div>
       </section>
 
-{/* section 5 */}
-      <section style={{...sectionStyle, backgroundImage: `url(${wallpaperImage})`, backgroundSize: "cover",
-      backgroundColor: "pink", paddingTop: 30, paddingBottom: 50,}} id="section5">
-        <div style={{ ...horizontalContainersStyle, alignItems: "center" }}>
-        <div style={containerItemStyleS5}>
-          <NasaApiComponent id="nasaBtn">NASA</NasaApiComponent>
-        </div>
-        <div style={{ ...containerItemStyleS5, fontSize: 14, paddingTop: 40 }}
-        >
-          <b>
-            If a picture doesn't appear after loading, please click again!
-          </b>
-          <MetApiComponent id="metBtn">
-            Metropolitan Museum of Art
-          </MetApiComponent>
-        </div>
-        <div style={containerItemStyleS5}>
-          <FactsComponent id="factsBtn"> Facts </FactsComponent>
-        </div>
+      <section
+        style={{
+          ...sectionStyle,
+          backgroundImage: `url(${wallpaperImage})`,
+          backgroundSize: "cover",
+          backgroundColor: "pink",
+          paddingTop: 30,
+                    paddingBottom: 50,
+        }}
+        id="section5"
+      >
+        <div style={{ ...horizontalContainersStyle, maxWidth: "100vw", alignItems: 'center' }}>
+          <div style={containerItemStyleS5}>
+            <NasaApiComponent id="nasaBtn">NASA</NasaApiComponent>
+          </div>
+          <div style={{ ...containerItemStyleS5, fontSize: 14, paddingTop: 40}}>
+            <b>If a picture doesn't appear after loading, please click again!</b>
+            <MetApiComponent id="metBtn">
+              Metropolitan Museum of Art
+            </MetApiComponent>
+          </div>
+          <div style={containerItemStyleS5}>
+            <FactsComponent id="factsBtn"> Facts </FactsComponent>
+          </div>
         </div>
       </section>
 
