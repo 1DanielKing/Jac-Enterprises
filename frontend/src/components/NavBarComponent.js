@@ -1,41 +1,63 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import signWhiteImage from '../images/signwhite.png'
+
 
 const NavBar = () => {
-  const navBarStyle = {
-    backgroundColor: 'purple', // Set the background color
-    color: 'white',          // Set the text color
-    padding: '2px',         // Add padding for spacing
-    textAlign: 'center',     // Center the text
-    position: 'fixed',       // Set the position to fixed
-    width: '100%',           // Take up the full width of the viewport
-    top: 0,                  // Stick to the top of the viewport
-    zIndex: 1000,            // Set a high z-index to ensure it's above other elements
-  };
 
-  const listItemStyle = {
-    display: 'inline-block',  // Display list items horizontally
-    marginRight: '20px',      // Add margin between list items
-  };
 
-  const linkStyle = {
-    textDecoration: 'none',   // Remove underlines from links
-    color: 'white',           // Set link color
-    fontWeight: 'bold',       // Make links bold
-    fontSize: '18px',         // Set link font size
-  };
+    const navBarContainer = {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        background: 'linear-gradient(to right, black, purple, red ,orange, yellow, orange, red, purple, black)',
+        height: '7%',
+        position: 'fixed',
+        width: '100vw',
+        top: 10,
+        zIndex: 1000,
+    }
 
-  return (
-    <nav style={navBarStyle}>
-      <ul>
-        <li style={listItemStyle}><Link to="/" style={linkStyle}>Home</Link></li>
-        <li style={listItemStyle}><Link to="/trivia" style={linkStyle}>Trivia</Link></li>
-        <li style={listItemStyle}><Link to="/rps" style={linkStyle}>RPS</Link></li>
-        <li style={listItemStyle}><Link to="/wordguesser" style={linkStyle}>Word Guesser</Link></li>
-        <li style={listItemStyle}><Link to="/facts" style={linkStyle}>Facts</Link></li>
-      </ul>
-    </nav>
-  );
+    const linkContainer = {
+        width: "25vw",
+        display: "flex",
+        justifyContent: "space-evenly",
+        textAlign: "center",
+        fontSize: '20px',
+        color: 'white',
+        fontFamily: 'Arial, sans-serif',
+    }
+
+    const linkStyle = {
+        textDecoration: 'none', 
+        color: 'white',
+        margin: '20px 10px', 
+      }
+
+    const mysteryEducatorStyle = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
+
+    return (
+
+        <div style={navBarContainer}>
+            <nav>
+                <div style={mysteryEducatorStyle}>
+                    <img img src={signWhiteImage} width="300px" alt="" srcset="" />
+                </div>
+
+            </nav>
+            <div style={linkContainer}>
+            <a href="/" style={linkStyle}>HOME</a>
+            <a href="/#section6" style={linkStyle}>ABOUT</a>
+            <a href="/#section6" style={linkStyle}>CONTACT</a>
+            </div>
+        </div>
+
+    )
+
 }
 
 export default NavBar;
