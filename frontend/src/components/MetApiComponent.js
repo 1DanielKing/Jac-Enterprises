@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 
 function MetApiComponent() {
+    const [isLoading, setIsLoading] = useState(false);
     const [imageUrl, setImageUrl] = useState(null);
     const [title, setTitle] = useState(null);
     const [culture, setCulture] = useState(null);
@@ -10,6 +11,7 @@ function MetApiComponent() {
     const [artistBio, setArtistBio] = useState(null);
 
     const fetchData = useCallback(() => {
+        setIsLoading(true);
         fetch('http://localhost:8080/api/arts')
             .then((response) => {
                 if (!response.ok) {
@@ -70,9 +72,11 @@ function MetApiComponent() {
                 ) {
                     setArtistBio("---Not Available---");
                 }
+                setIsLoading(false);
             })
             .catch((error) => {
                 console.error("Error:", error);
+                setIsLoading(false);
             });
     }, []);
 
@@ -94,6 +98,7 @@ function MetApiComponent() {
             </button>
             <div
                 style={{
+                    display: "flex",
                     width: "100%",
                     height: "100%",
                     justifyContent: "center",
@@ -101,22 +106,43 @@ function MetApiComponent() {
                     paddingTop: 20,
                 }}
             >
-                {imageUrl && (
-                    <div>
-                        <img
-                            src={imageUrl}
-                            alt="Met Art"
-                            style={{ maxWidth: "100%", maxHeight: "100%" }}
-                        />
-                        <div style={{ background: "rgb(221, 221, 221, 0.4)", fontSize: 20 }}>
-                            <h2><i>{title}</i></h2>
-                            <p><b>Culture: {culture}</b></p>
-                            <p><b>Date: {date}</b></p>
-                            <p><b>Period: {period}</b></p>
-                            <p><b>Artist: {artist}</b></p>
-                            <p><b>Artist Bio: {artistBio}</b></p>
+                {isLoading ? (
+                    <div className="loader">Loading</div> // Loading animation
+                ) : (
+                    imageUrl && (
+                        <div>
+                            <img
+                                src={imageUrl}
+                                alt="Met Art"
+                                style={{ maxWidth: "100%", maxHeight: "100%" }}
+                            />
+                            <div
+                                style={{
+                                    background: "rgb(221, 221, 221, 0.4)",
+                                    fontSize: 20,
+                                }}
+                            >
+                                <h2>
+                                    <i>{title}</i>
+                                </h2>
+                                <p>
+                                    <b>Culture: {culture}</b>
+                                </p>
+                                <p>
+                                    <b>Date: {date}</b>
+                                </p>
+                                <p>
+                                    <b>Period: {period}</b>
+                                </p>
+                                <p>
+                                    <b>Artist: {artist}</b>
+                                </p>
+                                <p>
+                                    <b>Artist Bio: {artistBio}</b>
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    )
                 )}
             </div>
         </div>

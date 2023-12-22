@@ -1,11 +1,14 @@
 import React, { useCallback, useState } from "react";
 
 function NasaApiComponent() {
+    const [isLoading, setIsLoading] = useState(false);
     const [imageUrl, setImageUrl] = useState(null);
     const [title, setTitle] = useState(null);
     const [objectDate, setObjectDate] = useState(null);
     const [explanation, setExplanation] = useState(null);
+
     const fetchData = useCallback(() => {
+        setIsLoading(true);
         fetch('http://localhost:8080/api/nasaPodData')
             .then((response) => {
                 if (!response.ok) {
@@ -31,9 +34,11 @@ function NasaApiComponent() {
                 if (data.explanation == null) {
                     setExplanation("---Not Available---");
                 }
+                setIsLoading(false);
             })
             .catch((error) => {
                 console.error("Error:", error);
+                setIsLoading(false);
             });
     }, []);
 
@@ -56,14 +61,17 @@ function NasaApiComponent() {
             </button>
             <div
                 style={{
+                    display: "flex",
                     width: "100%",
                     justifyContent: "center",
                     alignItems: "center",
                     paddingTop: 40,
                     height: "100%",
                 }}
-            >
-                {imageUrl && (
+            >{isLoading ? (
+                    <div className="loader">Loading</div>
+                     // Loading animation
+                ): imageUrl && (
                     <div>
                         <img
                             src={imageUrl}

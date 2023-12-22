@@ -167,7 +167,7 @@ const HomePage = () => {
             <NasaApiComponent id="nasaBtn">NASA</NasaApiComponent>
           </div>
           <div style={{ ...containerItemStyleS5, fontSize: 14, paddingTop: 40}}>
-            <b>If a picture doesn't appear, please click again!</b>
+            <b>If a picture doesn't appear after loading, please click again!</b>
             <MetApiComponent id="metBtn">
               Metropolitan Museum of Art
             </MetApiComponent>
