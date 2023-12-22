@@ -2,27 +2,20 @@ import React from "react";
 import RPSComponent from "../components/RPSComponent";
 import TriviaPage from "./TriviaPage";
 import WordGuesserComponent from "../components/WordGuesserComponent";
-import kingimage from '../images/king.png'
-import ortizimage from '../images/ortiz.png'
-import sotoimage from '../images/soto.png'
-import jacksonimage from '../images/jackson.png'
-import rogersimage from '../images/rogers.png'
+import kingImage from '../images/king.png'
+import ortizImage from '../images/ortiz.png'
+import sotoImage from '../images/soto.png'
+import jacksonImage from '../images/jackson.png'
+import rogersImage from '../images/rogers.png'
 import devBackground from '../images/dev-background.jpg'
+import wallpaperImage from "../images/wallpaper.png";
+import rpsBackGround from "../images/rpsBackground.png";
+
 
 
 
 const HomePage = () => {
     const sectionStyle = {
-        height: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        backgroundColor: '#add8e6',
-        marginTop: "20px", // Adjust the marginTop value to bring the section closer to the top
-      };
-
-      const comboAboutAndContactSectionStyle = {
         height: "100vh",
         display: "flex",
         alignItems: "center",
@@ -66,6 +59,68 @@ const HomePage = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const homeSectionStyle = {
+    height: "100vh",
+    display: "flex",
+    alignItems: "flex-start",
+    justifyContent: "center",
+    textAlign: "center",
+    marginTop: "0px",
+    backgroundImage: `url(${wallpaperImage}), linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red)`,
+    backgroundSize: "100% 100%",
+  };
+
+  const homeBannerStyle = {
+    width: "100vw",
+  };
+
+  
+  const containerModel = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.8)",
+    height: "65vh",
+    padding: "40px",
+    marginTop: "150px",
+    borderRadius: 15,
+  };
+
+  const imageHorizontalContainers = {
+    display: "flex",
+    justifyContent: "space-evenly",
+    padding: " 0 40px 0 40px",
+  };
+
+  const imageContainerModel = {
+    height: "300px",
+    width: "275px",
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    border: "10px solid yellow",
+    /*  backgroundImage: `url(${controllerImage})`, */
+    backgroundSize: "100% 100%",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    borderRadius: 15,
+  };
+
+
+/* Daniel King's container style const below this comment until sections begin */
+
+  const comboAboutAndContactSectionStyle = {
+    height: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    backgroundColor: '#add8e6',
+    marginTop: "20px", // Adjust the marginTop value to bring the section closer to the top
   };
 
   const aboutContainerStyle = {
@@ -181,7 +236,7 @@ const HomePage = () => {
 
                 <div style={personContainerStyle}> {/* Container for each person - Daniel King*/}
                   <div style={{ marginBottom: '10px' }}> {/* photo container */}
-                    <img src={kingimage} alt="Person" width="100" height="100" />
+                    <img src={kingImage} alt="Person" width="100" height="100" />
                   </div>
                   <div> {/* name and bio container */}
                     <p>Daniel King</p>
@@ -194,7 +249,7 @@ const HomePage = () => {
               
                 <div style={personContainerStyle}> {/* Container for each person - Brian Ortiz*/}
                   <div style={{ marginBottom: '10px' }}> {/* photo container */}
-                    <img src={ortizimage} alt="Person" width="100" height="100" />
+                    <img src={ortizImage} alt="Person" width="100" height="100" />
                   </div>
                   <div> {/* name and bio container */}
                     <p>Brian Ortiz</p>
@@ -207,7 +262,7 @@ const HomePage = () => {
               
                 <div style={personContainerStyle}> {/* Container for each person - Daniel Soto*/}
                   <div style={{ marginBottom: '10px' }}> {/* photo container */}
-                    <img src={sotoimage} alt="Person" width="100" height="100" />
+                    <img src={sotoImage} alt="Person" width="100" height="100" />
                   </div>
                   <div> {/* name and bio container */}
                     <p>Daniel Soto</p>
@@ -220,7 +275,7 @@ const HomePage = () => {
               
                 <div style={personContainerStyle}> {/* Container for each person - Arlen Jackson*/}
                   <div style={{ marginBottom: '10px' }}> {/* photo container */}
-                    <img src={jacksonimage} alt="Person" width="100" height="100" />
+                    <img src={jacksonImage} alt="Person" width="100" height="100" />
                   </div>
                   <div> {/* name and bio container */}
                     <p>Arlen Jackson</p>
@@ -233,7 +288,7 @@ const HomePage = () => {
 
                 <div style={personContainerStyle}> {/* Container for each person - Kyle Rogers*/}
                   <div style={{ marginBottom: '10px' }}> {/* photo container */}
-                    <img src={rogersimage} alt="Person" width="100" height="100" />
+                    <img src={rogersImage} alt="Person" width="100" height="100" />
                   </div>
                     <div> {/* name and bio container */}
                       <p>Kyle Rogers</p>
