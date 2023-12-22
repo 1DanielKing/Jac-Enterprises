@@ -26,10 +26,6 @@ function NasaApiComponent() {
                 if (data.title == null) {
                     setTitle("---Not Available---");
                 }
-                setObjectDate(data.objectDate);
-                if (data.objectDate == null) {
-                    setObjectDate("---Not Available---");
-                }
                 setExplanation(data.explanation);
                 if (data.explanation == null) {
                     setExplanation("---Not Available---");

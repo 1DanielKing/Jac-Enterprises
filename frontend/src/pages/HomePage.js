@@ -232,11 +232,11 @@ const HomePage = () => {
           backgroundSize: "cover",
           backgroundColor: "pink",
           paddingTop: 30,
-          paddingBottom: 50,
+                    paddingBottom: 50,
         }}
         id="section5"
       >
-        <div style={{ ...horizontalContainersStyle, alignItems: 'center' }}>
+        <div style={{ ...horizontalContainersStyle, maxWidth: "100vw", alignItems: 'center' }}>
           <div style={containerItemStyleS5}>
             <NasaApiComponent id="nasaBtn">NASA</NasaApiComponent>
           </div>
