@@ -40,6 +40,31 @@ const HomePage = () => {
     borderRadius: 15,
   };
 
+  const containerItemStyleS5 = {
+    flex: 1,
+    background: "rgb(221, 221, 221, 0.4)",
+    padding: "10px",
+    margin: "10px",
+    height: "100vh", // Set height to 100% to match the height of the horizontal containers
+    width: "60vh", // Adjust the width to make the containers wider
+    borderRadius: 15,
+    justifyContent: "center",
+    alignItems: "center",
+    overflowY: "auto",
+    "&::-webkit-scrollbar": {
+      width: "10px",
+    },
+    "&::-webkit-scrollbar-track": {
+      background: "#f1f1f1",
+    },
+    "&::-webkit-scrollbar-thumb": {
+      background: "#888",
+    },
+    "&::-webkit-scrollbar-thumb:hover": {
+      background: "#555",
+    },
+  };
+
   const placeholderBoxStyle = {
     width: "300px",
     height: "200px",
@@ -49,12 +74,12 @@ const HomePage = () => {
     margin: "20px",
   };
 
-    const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-        }
-    };
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div>
@@ -127,19 +152,27 @@ const HomePage = () => {
       </section>
 
       <section
-        style={{ ...sectionStyle, backgroundColor: "pink" }}
+        style={{
+          ...sectionStyle,
+          backgroundImage: `url(${wallpaperImage})`,
+          backgroundSize: "cover",
+          backgroundColor: "pink",
+          paddingTop: 30,
+          paddingBottom: 50,
+        }}
         id="section5"
       >
-        <div style={horizontalContainersStyle}>
-          <div style={containerItemStyle}>
+        <div style={{ ...horizontalContainersStyle, alignItems: 'center' }}>
+          <div style={containerItemStyleS5}>
             <NasaApiComponent id="nasaBtn">NASA</NasaApiComponent>
           </div>
-          <div style={containerItemStyle}>
+          <div style={{ ...containerItemStyleS5, fontSize: 14, paddingTop: 40}}>
+            <b>If a picture doesn't appear, please click again!</b>
             <MetApiComponent id="metBtn">
               Metropolitan Museum of Art
             </MetApiComponent>
           </div>
-          <div style={containerItemStyle}>
+          <div style={containerItemStyleS5}>
             <FactsComponent id="factsBtn"> Facts </FactsComponent>
           </div>
         </div>
@@ -150,7 +183,7 @@ const HomePage = () => {
         id="section6"
       >
         <div className="container">
-          {/* Placeholder box */}
+          Placeholder box
           <div style={placeholderBoxStyle}>
             <p>Content for Section 6</p>
           </div>

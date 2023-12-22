@@ -20,9 +20,24 @@ const FactsComponent = () => {
     <div>
       <h2>Facts</h2>
       <div>
-        <label>Select a category: </label>
-        <select onChange={(e) => handleCategoryChange(e.target.value)}>
-          <option value="">Select</option>
+        <label>
+          <b>Select a category: </b>
+        </label>
+        <select
+          onChange={(e) => handleCategoryChange(e.target.value)}
+          style={{
+            height: 50,
+            width: 100,
+            borderRadius: 50,
+            cursor: "pointer",
+            backgroundColor: "cyan",
+            borderStyle: "inset",
+            borderColor: "blue",
+            fontSize: 18,
+            textAlign: "center",
+          }}
+        >
+          <option value="" style={{}}>Select</option>
           {categories.map((category, index) => (
             <option key={index} value={category.toLowerCase()}>
               {category}
@@ -32,16 +47,32 @@ const FactsComponent = () => {
       </div>
       {currentCategory && (
         <div>
-          <ul>
-            {currentCategory.slice(currentIndex, currentIndex + 6).map((fact, index) => (
-              <li key={index}>{fact}</li>
-            ))}
+          <ul style={{ paddingTop: 10, fontSize: 25}}>
+            {currentCategory
+              .slice(currentIndex, currentIndex + 6)
+              .map((fact, index) => (
+                <li key={index}><b>{fact}</b></li>
+              ))}
           </ul>
-          <button onClick={showNextFacts}>Show More Facts</button>
+          <button
+            onClick={showNextFacts}
+            style={{
+              height: 60,
+              width: 170,
+              borderRadius: 50,
+              cursor: "pointer",
+              backgroundColor: "cyan",
+              borderStyle: "inset",
+              borderColor: "blue",
+              fontSize: 18,
+            }}
+          >
+            <b>Show More Facts</b>
+          </button>
         </div>
       )}
     </div>
-  )
+  );
 }
 
 export default FactsComponent
