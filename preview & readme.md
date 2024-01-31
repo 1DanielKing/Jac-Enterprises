@@ -37,3 +37,16 @@ The following are the requirements expected for the Single Page Application in w
 
 *Jac Enterprises has decided to open up a bidding/design competition to allow 3rd party consulting organizations to create a mystery educator application that will entertain and educate children about areas of interest that are exposed based upon the offerings of Jac Enterprises.*
 
+# Here is a preview of our application.
+
+![image](https://github.com/1DanielKing/Jac-Enterprises/assets/102125489/e1f429cc-e8ea-4482-b6c7-95c1d79fafab)
+![image](https://github.com/1DanielKing/Jac-Enterprises/assets/102125489/725e0e86-8a8f-42d5-9f72-38f3994300a5)
+![image](https://github.com/1DanielKing/Jac-Enterprises/assets/102125489/c08c88e9-3350-4138-88ea-3b3a510f9a3d)
+
+![image](https://github.com/1DanielKing/Jac-Enterprises/assets/102125489/95be5816-4f03-4bda-b572-05e1d52c5f3d)
+![image](https://github.com/1DanielKing/Jac-Enterprises/assets/102125489/3425db9c-c986-417f-9f20-f469cf967025)
+![image](https://github.com/1DanielKing/Jac-Enterprises/assets/102125489/af7c0ce2-bce6-40c4-9617-c47432153a4c)
+![image](https://github.com/1DanielKing/Jac-Enterprises/assets/102125489/13d11d4a-60e8-43d0-8295-f2d7bfdba7a4)
+
+
+
