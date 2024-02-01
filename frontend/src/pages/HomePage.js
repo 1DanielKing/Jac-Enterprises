@@ -407,9 +407,9 @@ const HomePage = () => {
                     <div>
                       {" "}
                       {/* name and bio container */}
-                      <p>Brian Ortiz</p>
+                      <p><a href="http://BrianOrtiz95.github.io/">Brian Ortiz</a></p>
                       <p>
-                      Dedicated family-man,  Florida-native, and US Army veteran turned software developer. 
+                      Dedicated family-man, Florida-native, and US Army veteran turned software developer. 
                       Combining discipline from military service with a passion for coding, I navigate life's 
                       missions with dedication and code proficiency.
                       </p>
@@ -433,7 +433,8 @@ const HomePage = () => {
                       {/* name and bio container */}
                       <p><a href="https://SotoDanielJ.github.io/">Daniel Soto</a></p>
                       <p>
-                      US Marines veteran turned full stack developer, skilled in Information Systems, security, and communications, who has expanded his coding expertise post military.
+                      Daniel Soto served in the US Marine Corps, managing information security, communication systems, and human resources. 
+                      Post-military, he acquired his Java and C# Full Stack Software Development certification from We Can Code It.
                       </p>
                     </div>
                   </div>
@@ -453,7 +454,7 @@ const HomePage = () => {
                     <div>
                       {" "}
                       {/* name and bio container */}
-                      <p>Arlen Jackson</p>
+                      <p><a href="http://arlenjackson1.github.io/">Arlen Jackson</a></p>
                       <p>U.S. Army veteran whose technical prowess ensured Army operations, while recruiting showcased his commitment to finding top talent. Transitioning to civilian life, Arlen continues to contribute to society through his endeavors.
                       </p>
                     </div>
@@ -474,7 +475,7 @@ const HomePage = () => {
                     <div>
                       {" "}
                       {/* name and bio container */}
-                      <p>Kyle Rogers</p>
+                      <p><a href="https://www.linkedin.com/in/kyle-rogers-470a8a219/">Kyle Rogers</a></p>
                       <p>
                       U.S. Marines Veteran, turned software developer, channeling her military skills and blending her core values 
                       with a passion for innovation, striving to make meaningful contributions 
